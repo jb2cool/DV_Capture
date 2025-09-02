@@ -13,11 +13,6 @@ set -u
 TAPE_NAME="$1"
 BASE_DIR="$HOME/minidv"
 
-# make sure the general working directory is there
-[ -d "${BASE_DIR}" ] || mkdir "${BASE_DIR}"
-mkdir "${BASE_DIR}/to-convert"
-mkdir "${BASE_DIR}/converted"
-
 # switch into directory for this tape
 cd "${BASE_DIR}/${TAPE_NAME}"
 
