@@ -16,8 +16,8 @@ BASE_DIR="$HOME/minidv"
 
 # make sure the general working directory is there
 [ -d "${BASE_DIR}" ] || mkdir "${BASE_DIR}"
-mkdir "${BASE_DIR}/to-convert"
-mkdir "${BASE_DIR}/converted"
+# mkdir "${BASE_DIR}/to-convert"
+# mkdir "${BASE_DIR}/converted"
 
 # create directory for this tape
 if [[ -d "${BASE_DIR}/${TAPE_NAME}" ]]; then
