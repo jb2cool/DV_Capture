@@ -31,13 +31,14 @@ else
 fi
 
 # Start dvgrab
-sudo dvgrab --rewind --autosplit --format dv2 "${TAPE_NAME}"-
+# sudo dvgrab --rewind --autosplit --format dv2 "${TAPE_NAME}"-
+sudo dvgrab -showstatus -t -a -rewind "${TAPE_NAME}"-
 
 # Write list of files for ffmpeg to concatenate
-rm -f list.txt && find . -name "${TAPE_NAME}*.avi" -exec echo "file '{}'" >> list.txt \;
+# rm -f list.txt && find . -name "${TAPE_NAME}*.avi" -exec echo "file '{}'" >> list.txt \;
 
 # Concatenate all video files into one
-ffmpeg -f concat -safe 0 -i list.txt -c copy "${TAPE_NAME}_concatenated.avi"
+# ffmpeg -f concat -safe 0 -i list.txt -c copy "${TAPE_NAME}_concatenated.avi"
 
 # move file to directory for HandBrake to convert
-mv "${TAPE_NAME}_concatenated.avi" "${BASE_DIR}/to-convert"
+# mv "${TAPE_NAME}_concatenated.avi" "${BASE_DIR}/to-convert"
