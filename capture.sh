@@ -32,7 +32,7 @@ fi
 
 # Start dvgrab
 # sudo dvgrab --rewind --autosplit --format dv2 "${TAPE_NAME}"-
-sudo dvgrab -showstatus -t -a -rewind "${TAPE_NAME}"-
+sudo dvgrab -showstatus -t -a -size 0 -rewind "${TAPE_NAME}"-
 
 # Write list of files for ffmpeg to concatenate
 # rm -f list.txt && find . -name "${TAPE_NAME}*.avi" -exec echo "file '{}'" >> list.txt \;
